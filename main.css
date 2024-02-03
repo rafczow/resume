@@ -1,0 +1,284 @@
+:root {
+    --main-color: rgba(255, 255, 255, 0.87);
+    --main-special-color: rgb(40, 184, 139);
+    --darker-special-color: rgb(0, 112, 73);
+    --main-bg-color: #242424;
+    --margin-l: 20px;
+    --margin-s: 15px;
+    --padding-l: 15px;
+    --padding-s: 10px;
+  
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --main-bg-color: #ffffff;
+      --main-color: #213547;
+    }
+  }
+  
+  #root {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  .container {
+    min-width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "topbar topbar topbar topbar"
+      "address address avatar avatar"
+      "summary summary summary summary"
+      "skill-bar skill-bar skill-bar skill-bar"
+      "skill-other skill-other skill-other skill-other";
+    gap: 25px;
+  }
+  
+  a {
+    font-weight: 500;
+    text-decoration: inherit;
+  }
+  
+  strong,
+  h1,
+  h2 {
+    color: var(--main-special-color);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3.2em;
+    line-height: 1.1;
+    margin-bottom: var(--margin-s);
+    padding-bottom: var(--padding-s);
+    border-bottom: 1px solid var(--main-special-color);
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .address {
+    grid-area: address;
+  }
+  
+  .avatar {
+    grid-area: avatar;
+    place-self: center;
+  }
+  
+  .summary {
+    grid-area: summary;
+    border-bottom: 1px dashed var(--darker-special-color);
+    padding-bottom: 25px;
+  }
+  
+  .summary h2 {
+    text-align: center;
+  }
+  
+  .summary ul {
+    list-style-image: url('vite.svg');
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  .topbar {
+    grid-area: topbar;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .topbar span {
+    display: flex;
+    min-width: 150px;
+    margin: 5px 0;
+  }
+  
+  .topbar img {
+    margin-right: 5px;
+  }
+  
+  .skill-head {
+    grid-area: skill-head;
+  }
+  
+  .skill-bar {
+    grid-area: skill-bar;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skill-bar div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .skill-bar .legend {
+    
+  }
+  
+  .skill-bar .legend .bar {
+    
+  }
+  
+  .skill-other {
+    grid-area: skill-other;
+  }
+  
+  .bar {
+    display: inline-block;
+    height: 24px;
+    width: 50%;
+    background-image: url('bar-bg.svg');
+    background-size: 0;
+    background-repeat: no-repeat;
+    letter-spacing: -2.5px;
+    color: var(--main-special-color);
+    border-left: 5px solid var(--darker-special-color);
+    border-right: 5px solid var(--darker-special-color);
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @media (min-width: 375px) {
+    .topbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    h1 {
+      margin-bottom: var(--margin-l);
+      padding-bottom: var(--padding-l);
+    }
+  
+    .container {
+      grid-template-areas: 
+      "topbar topbar topbar topbar"
+      "address address avatar avatar"
+      "summary summary summary summary"
+      "skill-bar skill-bar skill-other skill-other";
+    }
+      
+    .summary ul {
+      margin: 0 auto;
+      width: 45vw;
+    }
+  }
+  
+  /*
+  *   Animations
+  */
+  
+  .fill-20 {
+    animation-name: fill-20;
+  }
+  
+  @keyframes fill-20 {
+    from {
+      background-size: 0;
+    }
+  
+    to {
+      background-size: 20%;
+    }
+  }
+  
+  .fill-30 {
+    animation-name: fill-30;
+  }
+  
+  @keyframes fill-30 {
+    from {
+      background-size: 0;
+    }
+  
+    to {
+      background-size: 30%;
+    }
+  }
+  
+  .fill-60 {
+    animation-name: fill-60;
+  }
+  
+  @keyframes fill-60 {
+    from {
+      background-size: 0;
+    }
+  
+    to {
+      background-size: 60%;
+    }
+  }
+  
+  .fill-70 {
+    animation-name: fill-70;
+  }
+  
+  @keyframes fill-70 {
+    from {
+      background-size: 0;
+    }
+  
+    to {
+      background-size: 70%;
+    }
+  }
+  
+  .fill-80 {
+    animation-name: fill-80;
+  }
+  
+  @keyframes fill-80 {
+    from {
+      background-size: 0;
+    }
+  
+    to {
+      background-size: 80%;
+    }
+  }
+  
+  .fill-90 {
+    animation-name: fill-90;
+  }
+  
+  @keyframes fill-90 {
+    from {
+      background-size: 0;
+    }
+  
+    to {
+      background-size: 90%;
+    }
+  }
