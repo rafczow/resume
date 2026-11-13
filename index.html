@@ -1,117 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Resume RC</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./main.css'>
-    <script src='main.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rafał Czownicki – Software engineer</title>
+  <meta name="description" content="Rafał Czownicki – PHP and Magento 2 developer with hands-on DevOps experience.">
+  <link rel="preload" href="assets/fonts/IBMPlexSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="App">
-        <h1 class='item'>Software Engineer</h1>
-  
-        <div class='container'>
-          <div class="topbar">
-            <span><img src="vite.svg" width='25px'/>rafczow@gmail.com</span>
-            <span><img src="vite.svg" width='25px'/>+48 571 313 255</span>
-            <span><img src="vite.svg" width='25px'/>github.com/rafczow</span>
-            <span><img src="vite.svg" width='25px'/>webrc.pl</span>
-          </div>
-  
-          <div class="address">
-            <p><strong>Full name:</strong> Rafał Czownicki</p>
-            <p><strong>Date of birth:</strong> 6.01.1994</p>
-            <p><strong>Address:</strong> ul. Moraczewskiego 9/9, 66-400 Gorzów Wlkp.</p>
-          </div>
-          
-          <div class="avatar">
-          </div>
-  
-          <div class="summary">
-            <h2>Summary</h2>
-            <ul>
-              <li>Over 6 years of experience as professional developer</li>
-              <li>High commitment and sense of responsibility. Under my lead project NPS metric increased from 6 to 9 in three months.</li>
-              <li>Hands down devops experience and practical docker knowledge</li>
-              <li>After years of ecommerce development im now striving to learn new frameworks and technologies</li>
-            </ul>
-          </div>
-  
-          <div class="skill-bar">
-            <h2>Key Skills</h2>
-  
-            <div class="legend">
-              <span>Beginner</span>
-              <span class='bar'><img src="arrow.svg" /></span>
-              <span>Expert</span>
-            </div>
-            
-            <p><strong>Programming Languages</strong></p>
-            <div>
-              <span>PHP</span><span class='bar fill-80'></span>
-            </div>
-            
-            <div>
-              <span>JavaScript</span><span class='bar fill-20'></span>
-            </div>
-            
-            <div>
-              <span>HTML/CSS</span><span class='bar fill-90'></span>
-            </div>
-  
-            <p><strong>Frameworks</strong></p>
-            <div>
-              <span>Magento 2</span><span class='bar fill-90'></span>
-            </div>
-            
-            <div>
-              <span>Symfony</span><span class='bar fill-30'></span>
-            </div>
-  
-            <p><strong>Databases</strong></p>
-            <div>
-              <span>SQL</span><span class='bar fill-60'></span>
-            </div>
-            
-            <div>
-              <span>noSQL</span><span class='bar fill-20'></span>
-            </div>
-  
-            <p><strong>Other</strong></p>
-            <div>
-              <span>Linux + Docker</span><span class='bar fill-70'></span>
-            </div>
-            
-            <div>
-              <span>git</span><span class='bar fill-80'></span>
-            </div>
-          </div>
-          
-          <div class="skill-other">
-            <p><strong>Project development and management</strong></p>
-            <span>
-              composer, npm,
-              Nginx, Gitlab, Bitbucket,
-              Jira, Redmine
-            </span>
-  
-            <p><strong>Methodologies</strong></p>
-            <span>
-              Agile, CI/CD, RWD, PWA
-            </span>
-  
-            <p><strong>Self-studied (non commercial experience)</strong></p>
-            <span>
-              ElasticSearch, RabbitMQ, TDD, DDD
-            </span>
-  
-            <p><strong>Languages</strong></p>
-            [PL] Native <br />
-            [EN] Fluent (C1/C2)
-          </div>
-        </div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="https://webrc.pl"><svg viewBox="65 -760 3782 792" role="img" aria-label="webRC" focusable="false"><path class="logo-chevron" d="M85 -118 416 -301V-309L85 -491V-598L515 -357V-253L85 -12Z"></path><path class="logo-word" d="M920 -516H1013L1063 -82H1072L1149 -516H1255L1331 -82H1340L1391 -516H1480L1408 0H1274L1205 -400H1196L1126 0H992Z M1811 12Q1752 12 1705 -7Q1658 -26 1626 -61Q1594 -96 1577 -145.5Q1560 -195 1560 -257Q1560 -319 1577.5 -369Q1595 -419 1626.5 -454.5Q1658 -490 1703 -509Q1748 -528 1803 -528Q1857 -528 1901 -509.5Q1945 -491 1976 -457Q2007 -423 2023.5 -376Q2040 -329 2040 -272V-231H1670V-214Q1670 -153 1708 -114.5Q1746 -76 1813 -76Q1863 -76 1898.5 -97.5Q1934 -119 1956 -155L2024 -95Q1998 -50 1944.5 -19Q1891 12 1811 12ZM1803 -445Q1774 -445 1749.5 -435Q1725 -425 1707.5 -406.5Q1690 -388 1680 -363Q1670 -338 1670 -308V-301H1929V-311Q1929 -372 1894.5 -408.5Q1860 -445 1803 -445Z M2179 -740H2288V-428H2294Q2317 -475 2355 -501.5Q2393 -528 2450 -528Q2541 -528 2595 -460Q2649 -392 2649 -258Q2649 -124 2595 -56Q2541 12 2450 12Q2393 12 2355 -14.5Q2317 -41 2294 -88H2288V0H2179ZM2405 -77Q2467 -77 2500.5 -115Q2534 -153 2534 -216V-300Q2534 -363 2500.5 -401Q2467 -439 2405 -439Q2381 -439 2360 -433Q2339 -427 2323 -415Q2307 -403 2297.5 -385.5Q2288 -368 2288 -344V-172Q2288 -148 2297.5 -130.5Q2307 -113 2323 -101Q2339 -89 2360 -83Q2381 -77 2405 -77Z M2776 -88H2913V-428H2776V-516H3022V-379H3028Q3035 -406 3048 -431Q3061 -456 3081 -474.5Q3101 -493 3130 -504.5Q3159 -516 3198 -516H3260V-412H3158Q3098 -412 3060 -376.5Q3022 -341 3022 -281V-88H3209V0H2776Z M3619 12Q3561 12 3515.5 -7Q3470 -26 3438.5 -61Q3407 -96 3390.5 -146Q3374 -196 3374 -258Q3374 -320 3390.5 -370Q3407 -420 3438.5 -455Q3470 -490 3515.5 -509Q3561 -528 3618 -528Q3698 -528 3746.5 -494Q3795 -460 3819 -406L3734 -360Q3720 -396 3691.5 -417Q3663 -438 3618 -438Q3556 -438 3522 -400.5Q3488 -363 3488 -301V-215Q3488 -154 3522 -116Q3556 -78 3620 -78Q3668 -78 3698.5 -100Q3729 -122 3747 -160L3827 -111Q3802 -57 3751 -22.5Q3700 12 3619 12Z"></path></svg></a>
+    <p class="tag">Resume</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <p class="eyebrow">Software engineer</p>
+    <h1>Rafał Czownicki</h1>
+    <p class="lead">PHP and Magento 2 developer with hands-on DevOps experience. Based in Gorzów Wielkopolski, Poland.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:rafczow@gmail.com">Email me</a>
+      <a class="btn btn-secondary" href="https://github.com/rafczow">View GitHub profile</a>
+    </div>
+  </section>
+
+  <dl class="contact">
+    <div><dt class="mono">Email</dt><dd><a href="mailto:rafczow@gmail.com">rafczow@gmail.com</a></dd></div>
+    <div><dt class="mono">Phone</dt><dd><a href="tel:+48571313255">+48 571 313 255</a></dd></div>
+    <div><dt class="mono">GitHub</dt><dd><a href="https://github.com/rafczow">github.com/rafczow</a></dd></div>
+    <div><dt class="mono">Web</dt><dd><a href="https://webrc.pl">webrc.pl</a></dd></div>
+    <div><dt class="mono">Location</dt><dd>Gorzów Wielkopolski, Poland</dd></div>
+  </dl>
+
+  <section class="section" aria-labelledby="h-summary">
+    <div class="section-head">
+      <p class="eyebrow">01 / 04</p>
+      <h2 id="h-summary">Summary</h2>
+    </div>
+    <div class="section-body summary-body">
+      <ul class="summary-list">
+        <li>Over 6 years of experience as a professional developer.</li>
+        <li>High commitment and a sense of responsibility.</li>
+        <li>Hands-on DevOps experience and practical Docker knowledge.</li>
+        <li>After years of e-commerce development, I'm now striving to learn new frameworks and technologies.</li>
+      </ul>
+      <div class="card stat">
+        <p class="mono">Project NPS</p>
+        <p class="value">6 → 9</p>
+        <p class="note">In three months, under my lead.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-skills">
+    <div class="section-head">
+      <p class="eyebrow">02 / 04</p>
+      <h2 id="h-skills">Key skills</h2>
+      <p class="mono">Scale: 1 beginner → 10 expert</p>
+    </div>
+    <div class="section-body skills-body">
+
+      <div class="card skill-group">
+        <h3>Programming languages</h3>
+        <ul>
+          <li class="skill"><span class="skill-name">PHP</span><span class="meter" aria-hidden="true"><span style="--v:80%"></span></span><span class="skill-score mono">8/10</span></li>
+          <li class="skill"><span class="skill-name">JavaScript</span><span class="meter" aria-hidden="true"><span style="--v:20%"></span></span><span class="skill-score mono">2/10</span></li>
+          <li class="skill"><span class="skill-name">HTML/CSS</span><span class="meter" aria-hidden="true"><span style="--v:90%"></span></span><span class="skill-score mono">9/10</span></li>
+        </ul>
+      </div>
+
+      <div class="card skill-group">
+        <h3>Frameworks</h3>
+        <ul>
+          <li class="skill"><span class="skill-name">Magento 2</span><span class="meter" aria-hidden="true"><span style="--v:90%"></span></span><span class="skill-score mono">9/10</span></li>
+          <li class="skill"><span class="skill-name">Symfony</span><span class="meter" aria-hidden="true"><span style="--v:30%"></span></span><span class="skill-score mono">3/10</span></li>
+        </ul>
+      </div>
+
+      <div class="card skill-group">
+        <h3>Databases</h3>
+        <ul>
+          <li class="skill"><span class="skill-name">SQL</span><span class="meter" aria-hidden="true"><span style="--v:60%"></span></span><span class="skill-score mono">6/10</span></li>
+          <li class="skill"><span class="skill-name">NoSQL</span><span class="meter" aria-hidden="true"><span style="--v:20%"></span></span><span class="skill-score mono">2/10</span></li>
+        </ul>
+      </div>
+
+      <div class="card skill-group">
+        <h3>Other</h3>
+        <ul>
+          <li class="skill"><span class="skill-name">Linux + Docker</span><span class="meter" aria-hidden="true"><span style="--v:70%"></span></span><span class="skill-score mono">7/10</span></li>
+          <li class="skill"><span class="skill-name">Git</span><span class="meter" aria-hidden="true"><span style="--v:80%"></span></span><span class="skill-score mono">8/10</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-tools">
+    <div class="section-head">
+      <p class="eyebrow">03 / 04</p>
+      <h2 id="h-tools">Tools and methods</h2>
+    </div>
+    <div class="section-body stack">
+      <div>
+        <h3>Project development and management</h3>
+        <ul class="chips">
+          <li>composer</li><li>npm</li><li>Nginx</li><li>GitLab</li><li>Bitbucket</li><li>Jira</li><li>Redmine</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Methodologies</h3>
+        <ul class="chips">
+          <li>Agile</li><li>CI/CD</li><li>RWD</li><li>PWA</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Self-studied <small>(non-commercial experience)</small></h3>
+        <ul class="chips">
+          <li>Elasticsearch</li><li>RabbitMQ</li><li>TDD</li><li>DDD</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-lang">
+    <div class="section-head">
+      <p class="eyebrow">04 / 04</p>
+      <h2 id="h-lang">Languages</h2>
+    </div>
+    <dl class="section-body lang-list">
+      <div><dt>Polish</dt><dd class="mono">Native</dd></div>
+      <div><dt>English</dt><dd class="mono">Fluent (C1/C2)</dd></div>
+    </dl>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Rafał Czownicki · Software engineer</p>
+    <p><a href="https://webrc.pl">webrc.pl</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
